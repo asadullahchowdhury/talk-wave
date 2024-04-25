@@ -1,0 +1,16 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --theme-color: #33ACFF;
+  --theme-color-dark: #3374FF;
+  --theme-color2: #A869FF;
+  --theme-color2-dark: #8F45ED;
+  --twitter: #55acee;
+  --facebook: #3b5998;
+  --google: #F90101;
+  --f-lato: "Lato", sans-serif;
+}
+
+
+/*Pages*/
+@import "pages/authentication";

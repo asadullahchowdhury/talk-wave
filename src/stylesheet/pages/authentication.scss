@@ -1,0 +1,52 @@
+.auth-layout {
+  .form-group {
+    .form-control {
+      height: 50px;
+    }
+  }
+
+  .or-text {
+    position: relative;
+
+    &:before, &:after {
+      display: inline-block;
+      content: "";
+      border-top: 1px solid #ededed;
+      width: 4.5rem;
+      margin: 0 1rem;
+    }
+  }
+
+  .btn-social {
+    width: 45px;
+    height: 45px;
+    color: var(--white);
+
+    &.facebook {
+      background-color: var(--facebook);
+      transition: .3s all ease-in-out;
+
+      &:hover {
+        background-color: darken(#3b5998, 10%);
+      }
+    }
+
+    &.twitter {
+      background-color: var(--twitter);
+      transition: .3s all ease-in-out;
+
+      &:hover {
+        background-color: darken(#55acee, 10%);
+      }
+    }
+
+    &.google {
+      background-color: var(--google);
+      transition: .3s all ease-in-out;
+
+      &:hover {
+        background-color: darken(#F90101, 10%);
+      }
+    }
+  }
+}

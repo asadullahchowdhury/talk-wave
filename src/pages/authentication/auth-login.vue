@@ -91,7 +91,33 @@
         </div>
         <!--Authentication form end  -->
       </div>
-      <div class="col-lg-7 col-md-6 d-md-block d-none min-vh-100 bg-primary">1</div>
+      <div class="col-lg-7 col-md-6 d-md-block d-none min-vh-100 position-fixed end-0 right-side">
+        <div class="bg-circle">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="cross"></div>
+        <div class="cross1"></div>
+        <div class="cross2"></div>
+        <div class="dot"></div>
+        <div class="dot1"></div>
+        <div class="maincircle"></div>
+        <div class="top-circle"></div>
+        <div class="center-circle"></div>
+        <div class="bottom-circle"></div>
+        <div class="bottom-circle1"></div>
+        <div class="right-circle"></div>
+        <div class="right-circle1"></div>
+      </div>
     </div>
   </div>
 </template>

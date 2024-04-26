@@ -1,21 +1,29 @@
 :root {
   --black: #000;
+  --black-1: #0001;
+  --black-2: #0002;
   --white: #fff;
   --theme-color: #33ACFF;
+  --theme-fade: rgba(51, 172, 255, 0.3);
   --theme-color-dark: #3374FF;
   --theme-color2: #A869FF;
   --theme-color2-dark: #8F45ED;
   --twitter: #55acee;
   --facebook: #3b5998;
   --google: #F90101;
-  --light-blue:#eff7fe;
-  --light-blue2:#d0eafb;
+  --light-blue: #eff7fe;
+  --light-blue2: #d0eafb;
+  --grey-500: #ccc;
+  --light-green: #00dd00;
+  --light-green-fade: rgba(0, 221, 0, 0.3);
   --f-lato: "Lato", sans-serif;
 }
 
 /*Components*/
 @import "components/iterations";
+@import "components/switch";
 
 
 /*Pages*/
 @import "pages/authentication";
+@import "pages/inbox";

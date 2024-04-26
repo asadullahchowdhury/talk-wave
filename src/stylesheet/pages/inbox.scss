@@ -1,0 +1,34 @@
+.chat-layout {
+  width: 100%;
+  height: 100vh;
+
+  &.messenger {
+    .messenger-inner {
+      height: calc(100vh - 2rem);
+      padding: 15px;
+
+
+      .user-info {
+        .user-img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      .chat-list-inner {
+        height: calc(100vh - 401px);
+        overflow: auto;
+        &::-webkit-scrollbar{
+          width: 0;
+        }
+
+        .each-friend {
+          transition: .3s all ease-in-out;
+          &:hover{
+            background-color: var(--theme-fade);
+          }
+        }
+      }
+    }
+  }
+}

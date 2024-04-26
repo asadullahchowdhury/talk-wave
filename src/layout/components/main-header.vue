@@ -21,7 +21,7 @@
           </ul>
 
           <router-link :to="{name:'AuthLogin'}" class="btn btn-outline-dark rounded-pill px-4 mx-2">Login</router-link>
-          <a href="javascript:void(0)" class="btn btn-dark rounded-pill px-4 mx-2">Signup</a>
+          <router-link :to="{name:'AuthRegister'}" class="btn btn-dark rounded-pill px-4 mx-2">Signup</router-link>
         </div>
       </div>
     </nav>

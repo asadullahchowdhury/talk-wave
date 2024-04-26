@@ -5,7 +5,7 @@
     <div class="logo fw-bold fs-2 mb-3 ">
       <img src="https://themes.pixelstrap.com/chitchat/assets/images/logo/landing-logo.png" alt="">
     </div>
-    <h3 class="fw-semibold">Hello Everyone , We are Chatecho</h3>
+    <h3 class="fw-semibold">Forgot Password? </h3>
     <p class="text-muted mb-4">Welcome to Chatecho please login to your account.</p>
     <!--Form Header end  -->
 
@@ -17,32 +17,11 @@
       <div class="error-report"></div>
     </div>
 
-    <!--Password input-->
-    <div class="form-group mb-4">
-      <label for="password" class="form-label fw-semibold">Password</label>
-      <input type="password" class="form-control rounded-pill ps-4 w-100 shadow-none"
-             placeholder="Enter your password" name="password">
-      <div class="error-report"></div>
-    </div>
-
-    <!--Remember / Forgot-->
-    <div class="form-group mb-4 d-flex justify-content-between align-items-center">
-      <div class="form-check small text-muted">
-        <input class="form-check-input" type="checkbox" value="" id="rememberMe">
-        <label class="form-check-label" for="rememberMe">
-          Remember me.
-        </label>
-      </div>
-
-      <router-link :to="{name:'AuthForgot'}" class="small text-decoration-none text-muted">Forgot Password?</router-link>
-
-    </div>
 
     <!--Action button start-->
     <div class="form-group my-5 d-flex gap-3 justify-content-center">
-      <button type="submit" class="btn btn-primary rounded-pill width-150 height-50">Login</button>
-      <button type="button" class="btn btn-dark rounded-pill width-150 height-50" @click="redirectToRegister">
-        Signup
+      <button type="submit" class="btn btn-dark rounded-pill width-250 height-50" @click="redirectToReset">Forgot
+        Password
       </button>
     </div>
     <!--Action button end  -->
@@ -92,8 +71,8 @@ export default {
   },
   methods: {
     /*Function to redirect in signup page*/
-    redirectToRegister() {
-      this.$router.push({name: 'AuthRegister'})
+    redirectToReset() {
+      this.$router.push({name: 'AuthReset'})
     }
   }
 }

@@ -59,9 +59,104 @@
       .inbox-inner {
         overflow: auto;
         height: calc(100vh - 220px);
+        padding: 20px;
 
         &::-webkit-scrollbar {
           width: 0;
+        }
+
+        .outgoing-msg {
+          width: auto;
+          height: auto;
+
+
+          .msg {
+            padding: 20px 25px;
+            background-color: var(--bs-gray-200);
+            border-radius: 20px 0 20px 20px;
+            display: inline-block;
+            top: 5px;
+
+            &:after {
+              content: '';
+              position: absolute;
+              border-left: 15px solid var(--bs-gray-200);
+              border-bottom: 15px solid transparent;
+              bottom: initial;
+              left: initial;
+              top: 0;
+              right: -10px;
+
+            }
+
+            .time {
+              font-size: 10px;
+              opacity: 0;
+              visibility: hidden;
+              transition: .3s all ease-in-out;
+            }
+
+            &:hover {
+              .time {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+
+          .user-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+          }
+        }
+
+        .incoming-msg {
+          width: auto;
+          height: auto;
+
+
+          .msg {
+            padding: 20px 25px;
+            background-color: var(--white);
+            border-radius: 0 20px 20px 20px;
+            display: inline-block;
+            top: 5px;
+
+            &:after {
+              content: '';
+              position: absolute;
+              border-right: 15px solid var(--white);
+              border-bottom: 15px solid transparent;
+              bottom: initial;
+              right: initial;
+              top: 0;
+              left: -10px;
+
+            }
+
+            .time {
+              font-size: 10px;
+              opacity: 0;
+              visibility: hidden;
+              transition: .3s all ease-in-out;
+            }
+
+            &:hover {
+              .time {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+
+          .user-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+          }
         }
       }
 

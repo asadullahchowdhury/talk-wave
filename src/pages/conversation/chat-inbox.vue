@@ -102,7 +102,46 @@
           <!--Inbox header end  -->
 
           <!--Inbox inner start-->
-          <div class="inbox-inner p-lg-4 p-3"></div>
+          <div class="inbox-inner p-lg-4 p-3">
+            <!--Outgoing msg start-->
+            <div class="outgoing-msg d-flex justify-content-end mb-3 gap-3">
+              <div class="msg shadow position-relative">
+                this is a message.
+                <span class="time position-absolute end-0 bottom-0 p-1 pe-3 text-muted">11:32 am</span>
+              </div>
+              <div class="user">
+                <img class="user-img" src="../../assets/image/dummy-user.jpg" alt="user">
+              </div>
+            </div>
+            <!--Outgoing msg end  -->
+
+            <!--Outgoing msg start-->
+            <div class="outgoing-msg d-flex justify-content-end mb-3 gap-3">
+              <div class="msg shadow position-relative">
+                this is a message. this is a message. this is a message. this is a message.
+                <span class="time position-absolute end-0 bottom-0 p-1 pe-3 text-muted">11:32 am</span>
+              </div>
+              <div class="user">
+                <img class="user-img" src="../../assets/image/dummy-user.jpg" alt="user">
+              </div>
+            </div>
+            <!--Outgoing msg end  -->
+
+
+            <!--Incoming msg start-->
+            <div class="incoming-msg d-flex justify-content-start mb-3 gap-3">
+              <div class="user">
+                <img class="user-img" src="../../assets/image/dummy-user.jpg" alt="user">
+              </div>
+
+              <div class="msg shadow position-relative">
+                Hey there i'm a demo user
+                <span class="time position-absolute end-0 bottom-0 p-1 pe-3 text-muted">11:32 am</span>
+              </div>
+            </div>
+            <!--Incoming msg end  -->
+
+          </div>
           <!--Inbox inner end  -->
 
           <!--Inbox footer start-->

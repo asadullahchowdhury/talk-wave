@@ -1,0 +1,28 @@
+$iterationValue: 1000; //Defines the number of iteration.
+
+$base-value: 1px; //Defines the base value.
+
+
+@for $i from 1 through $iterationValue { // loop
+  .min-width-#{$i} {
+    min-width: $base-value * $i !important;
+  }
+  .min-height-#{$i} {
+    min-height: $base-value * $i !important;
+  }
+
+  .max-width-#{$i} {
+    max-width: $base-value * $i !important;
+  }
+  .max-height-#{$i} {
+    max-height: $base-value * $i !important;
+  }
+
+  .width-#{$i} {
+    width: $base-value * $i !important;
+  }
+
+  .height-#{$i} {
+    height: $base-value * $i !important;
+  }
+}

@@ -56,7 +56,12 @@
     }
   }
 
-  .right-side {
+  .left-auth-box{
+    background-color: rgba(255,255,255,.8);
+    z-index: 1;
+  }
+
+  .right-auth-box {
     background-color: var(--light-blue);
     position: relative;
     display: flex;
@@ -319,6 +324,103 @@
       right: 9%;
       position: absolute;
     }
+
+    .heart-logo {
+      position: absolute;
+      -webkit-animation: heartbeat 5s infinite;
+      animation: heartbeat 5s infinite;
+      top: 15%;
+      right: 35%;
+    }
+
+    .hash-logo {
+      position: absolute;
+      top: 15%;
+      right: 27%;
+    }
+
+    .auth-img {
+      position: absolute;
+      top: 30%;
+      @media screen and (max-width:991px) {
+      width: 80%;
+    }
+    }
+
+    .boy-img {
+      position: absolute;
+      left: 36%;
+      top: 52%;
+      @media screen and (max-width:991px) {
+        width: 20%;
+        left: 20%;
+        top: 35%;
+      }
+    }
+
+    .girl-img {
+      top: 27%;
+      right: 27%;
+      position: absolute;
+      @media screen and (max-width:991px) {
+        width: 20%;
+        top: 32%;
+        right: 7%;
+      }
+    }
+
+    .cloud-logo {
+      position: absolute;
+      top: 15%;
+      left: 0;
+      -webkit-animation: homecloud 90s linear infinite;
+      animation: homecloud 90s linear infinite;
+      -webkit-transform: scale(0.15);
+      transform: scale(0.15);
+    }
+
+    .cloud-logo1 {
+      position: absolute;
+      bottom: 10%;
+      -webkit-animation: animateCloud 25s linear infinite;
+      animation: animateCloud 25s linear infinite;
+      height: 25px;;
+    }
+
+    .cloud-logo2 {
+      position: absolute;
+      top: 2%;
+      -webkit-animation: homecloud 60s linear infinite;
+      animation: homecloud 60s linear infinite;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+
+    .cloud-logo3 {
+      position: absolute;
+      top: 31%;
+      -webkit-animation: animateCloud 45s linear infinite;
+      animation: animateCloud 45s linear infinite;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      height: 30px;
+    }
+
+    .cloud-logo4 {
+      position: absolute;
+      -webkit-animation: animateCloud 80s linear infinite;
+      animation: animateCloud 80s linear infinite;
+      -webkit-transform: scale(0.55);
+      transform: scale(0.55);
+    }
+
+    .hash-logo1 {
+      position: absolute;
+      top: 60%;
+      left: 25%;
+      -webkit-transform: scalex(-1);
+      transform: scalex(-1);
+    }
   }
 }
 
@@ -341,5 +443,49 @@
   }
   100% {
     transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+
+/* KEYFRAMES */
+@keyframes animateCloud {
+  0% {
+    margin-left: -700px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes homecloud {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(.75);
+  }
+  100% {
+    transform: scale(.75);
   }
 }

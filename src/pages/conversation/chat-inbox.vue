@@ -87,7 +87,41 @@
 
       <!--Inbox content start-->
       <div class="col-6">
-        <div class="messenger-inner border rounded-5 bg-light"></div>
+        <div class="messenger-inner shadow rounded-5 bg-light p-0">
+          <!--Inbox header start-->
+          <div class="inbox-header d-flex justify-content-between rounded-top-5 py-4 px-3 align-items-center">
+            <h5 class="inbox-title d-flex align-items-center fw-bold mb-0">John doe
+              <span class="activity ms-2"></span>
+            </h5>
+
+            <div class="actions d-flex align-items-center gap-3">
+              <a href="javascript:void(0)" class="btn rounded-circle py-2"><i class="fa-solid fa-video"></i></a>
+              <a href="javascript:void(0)" class="btn rounded-circle py-2"><i class="fa-solid fa-phone"></i></a>
+            </div>
+          </div>
+          <!--Inbox header end  -->
+
+          <!--Inbox inner start-->
+          <div class="inbox-inner p-lg-4 p-3"></div>
+          <!--Inbox inner end  -->
+
+          <!--Inbox footer start-->
+          <div class="inbox-footer p-4">
+
+            <div class="form-group position-relative">
+              <input type="text" placeholder="Type here... "
+                     class="form-control rounded-pill shadow border-0 height-50">
+              <div class="icon position-absolute top-0 start-0 ps-3 pt-2 mt-1">
+                <a href="javascript:void(0)"><i class="fa-solid fa-face-smile fs-4"></i></a>
+              </div>
+
+              <div class="send-btn position-absolute top-0 end-0 pe-4 pt-2 mt-1">
+                <a href="javascript:void(0)"><i class="fa-solid fa-paper-plane fs-4"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--Inbox footer end  -->
+        </div>
       </div>
       <!--Inbox content end  -->
 

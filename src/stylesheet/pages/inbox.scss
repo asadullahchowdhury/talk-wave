@@ -18,14 +18,91 @@
       .chat-list-inner {
         height: calc(100vh - 401px);
         overflow: auto;
-        &::-webkit-scrollbar{
+
+        &::-webkit-scrollbar {
           width: 0;
         }
 
         .each-friend {
           transition: .3s all ease-in-out;
-          &:hover{
+
+          &:hover {
             background-color: var(--theme-fade);
+          }
+        }
+      }
+
+      .inbox-header {
+        background-color: var(--grey-500);
+
+        .inbox-title {
+          .activity {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--light-green);
+          }
+        }
+
+        .actions {
+          .btn {
+            transition: .3s all ease-in-out;
+
+            &:hover {
+              background-color: var(--grey-600) !important;
+            }
+          }
+        }
+      }
+
+      .inbox-inner {
+        overflow: auto;
+        height: calc(100vh - 220px);
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+
+      .inbox-footer {
+        .form-group {
+          .form-control {
+            padding-left: 60px;
+            padding-right: 50px;
+          }
+        }
+
+        .icon {
+          a {
+            color: var(--bs-gray-600);
+            transition: .3s all ease-in-out;
+
+            &:hover {
+              color: var(--theme-color);
+            }
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            top: 10px;
+            border-radius: 5px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bs-gray-400);
+          }
+        }
+
+        .send-btn {
+          a {
+            color: var(--bs-gray-600);
+            transition: .3s all ease-in-out;
+
+            &:hover {
+              color: var(--theme-color);
+            }
           }
         }
       }

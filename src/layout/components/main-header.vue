@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">TalkWave</a>
+        <a class="navbar-brand" href="#"><b>Chat</b>Echo</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <router-link :to="{name:'InboxDashboard'}" class="nav-link" href="#">Dashboard</router-link>
             </li>
           </ul>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="inbox-details container position-relative">
+  <div class="inbox-details container position-relative slide-left">
     <router-link :to="{name:'ChatInbox'}" href="javascript:void(0)" class="btn btn-light "><i class="fa-solid fa-arrow-left"></i>
     </router-link>
 

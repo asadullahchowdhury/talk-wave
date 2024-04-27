@@ -125,7 +125,7 @@
 
       <!--details content start-->
       <div :class="details === true ? 'col-xxl-3 col-md-5 d-md-block d-none' : 'd-none'">
-        <div class="messenger-inner">
+        <div class="messenger-inner slide-left">
           <div class="inbox-details">
 
             <!--Details header start-->

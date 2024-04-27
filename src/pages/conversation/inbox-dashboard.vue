@@ -31,7 +31,7 @@
                data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-gear"></i>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu shadow border-0">
               <li><a class="dropdown-item" href="javascript:void(0)">Profile</a></li>
               <li><a class="dropdown-item" href="javascript:void(0)">Settings</a></li>
               <li><a class="dropdown-item" href="javascript:void(0)">Logout</a></li>
@@ -41,7 +41,7 @@
 
           <!--Search input start-->
           <div class="form-group my-4 position-relative">
-            <input type="text" class="form-control pe-5 height-60 rounded-4 shadow-none" placeholder="Search contact">
+            <input type="text" class="form-control pe-5 height-60 rounded-4 shadow border-0" placeholder="Search contact">
             <div class="search-icon position-absolute top-0 end-0 p-3 mt-1">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
@@ -68,7 +68,8 @@
             <!--tab list end  -->
 
             <ul class="chat-list-inner m-0 p-0">
-              <li class="each-friend rounded-4 px-2 py-3  d-flex align-items-center justify-content-between" :key="each" @click="goToChat"
+              <li class="each-friend rounded-4 px-2 py-3  d-flex align-items-center justify-content-between" :key="each"
+                  @click="goToChat"
                   v-for="each in [1,2,3,4,5,6,7,8,9]">
                 <div class="d-flex flex-grow-1 gap-3 align-items-center">
                   <img class="width-50 height-50 rounded-circle border" src="../../assets/image/dummy-user.jpg"
@@ -92,8 +93,9 @@
       <!--List content end  -->
 
       <!--Inbox content start-->
-      <div class=""
-           :class="details === true ? 'col-xl-6 col-md-7 d-md-block d-none' : 'col-xxl-9 col-xl-8 col-md-7 d-md-block d-none'">
+      <div
+          :class="details === true ? 'col-xl-6 col-md-7 d-md-block d-none' : 'col-xxl-9 col-xl-8 col-md-7 d-md-block d-none'"
+          v-if="!welcome_msg">
         <div class="messenger-inner shadow rounded-5 bg-light p-0">
 
           <!--Inbox header start-->
@@ -206,8 +208,8 @@
       <!--Inbox content end  -->
 
       <!--details content start-->
-      <div :class="details === true ? 'col-xxl-3 col-xl-2 d-xl-block d-none' : 'd-none'">
-        <div class="messenger-inner">
+      <div :class="details === true ? 'col-xxl-3 col-xl-2 d-xl-block d-none ' : 'd-none'" v-if="!welcome_msg">
+        <div class="messenger-inner slide-left">
           <div class="inbox-details">
 
             <!--Details header start-->
@@ -296,6 +298,27 @@
         </div>
       </div>
       <!--details content end  -->
+
+
+      <!--Welcome msg start-->
+      <div class="col-xxl-9 col-xl-8 col-md-7 bg-light rounded-5" v-if="welcome_msg">
+        <div class="w-100 my-5 d-flex justify-content-center align-items-center">
+
+          <div class="d-flex gap-3">
+            <div class="width-120 height-120 rounded-circle border-2">
+              <img class="img-fluid rounded-circle" src="../../assets/image/dummy-user.jpg" alt="">
+            </div>
+            <div class="">
+              <div class="display-3">Welcome!</div>
+              <h3>John doe</h3>
+            </div>
+<!--            <div class="ms-auto">-->
+<!--              <button type="button" class="btn btn-outline-dark">Share profile</button>-->
+<!--            </div>-->
+          </div>
+        </div>
+      </div>
+      <!--Welcome msg end  -->
     </div>
   </div>
 </template>
@@ -306,13 +329,14 @@ export default {
     return {
       details: false,
       single: false,
+      welcome_msg: false,
     }
   },
   mounted() {
     window.onresize = function (event) {
-      if (event.srcElement.innerWidth < 767){
+      if (event.srcElement.innerWidth < 767) {
         this.single = true;
-        console.log(this.single,'s')
+        console.log(this.single, 's')
       }
     };
 

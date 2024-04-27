@@ -9,6 +9,8 @@ import AuthRegister from "@/pages/authentication/auth-register.vue";
 import AuthForgot from "@/pages/authentication/auth-forgot.vue";
 import AuthReset from "@/pages/authentication/auth-reset.vue";
 import ChatInbox from "@/pages/conversation/chat-inbox.vue";
+import InboxDetails from "@/pages/conversation/inbox-details.vue";
+import InboxDashboard from "@/pages/conversation/inbox-dashboard.vue";
 
 const routes = [
     {
@@ -28,9 +30,11 @@ const routes = [
         ]
     },
     {
-        path: '/inbox', name: 'ChatLayout', component: ChatLayout,
+        path: '/dashboard', name: 'ChatLayout', component: ChatLayout,
         children: [
-            {path: '', name: 'ChatInbox', component: ChatInbox, meta: {name: 'Inbox'}},
+            {path: '', name: 'InboxDashboard', component: InboxDashboard, meta: {name: 'Dashboard'}},
+            {path: 'inbox', name: 'ChatInbox', component: ChatInbox, meta: {name: 'Inbox'}},
+            {path: '/details', name: 'InboxDetails', component: InboxDetails, meta: {name: 'Details'}},
         ]
     },
 ]

@@ -10,13 +10,72 @@
 
       .user-info {
         .user-img {
-          width: 150px;
-          height: 150px;
+          width: 120px;
+          height: 120px;
+
+          @media screen and (max-width: 991px) {
+            width: 80px;
+            height: 80px;
+          }
+        }
+
+        .info {
+          .title {
+            font-size: 24px;
+            @media screen and (max-width: 991px) {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .setting-btn {
+          right: -15px;
+          top: -20px;
+        }
+      }
+
+      .tab-list {
+        li {
+          a {
+            position: relative;
+            color: var(--bs-gray-500);
+
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: -8px;
+              left: 0;
+              height: 2px;
+              border-radius: 5px;
+              width: 100%;
+              background-color: var(--theme-color);
+              transform: scaleX(0);
+              transition: .3s all ease-in-out;
+              transform-origin: left;
+            }
+
+            &:hover {
+              &:before {
+                transform: scaleX(1);
+                transition: .3s all ease-in-out;
+              }
+            }
+
+            &.active {
+              font-weight: bold;
+              color: var(--black);
+
+              &:before {
+                transform: scaleX(1);
+                transition: .3s all ease-in-out;
+              }
+            }
+          }
         }
       }
 
       .chat-list-inner {
-        height: calc(100vh - 401px);
+        height: calc(100vh - 360px);
         overflow: auto;
 
         &::-webkit-scrollbar {
@@ -48,6 +107,8 @@
         .actions {
           .btn {
             transition: .3s all ease-in-out;
+            width: 40px;
+            height: 40px;
 
             &:hover {
               background-color: var(--grey-600) !important;
@@ -60,6 +121,12 @@
         overflow: auto;
         height: calc(100vh - 220px);
         padding: 20px;
+
+        &.half {
+          @media screen and (min-width: 1199px) {
+            max-width: 80%;
+          }
+        }
 
         &::-webkit-scrollbar {
           width: 0;
@@ -76,6 +143,7 @@
             border-radius: 20px 0 20px 20px;
             display: inline-block;
             top: 5px;
+            max-width: 80%;
 
             &:after {
               content: '';
@@ -123,6 +191,7 @@
             border-radius: 0 20px 20px 20px;
             display: inline-block;
             top: 5px;
+            max-width: 80%;
 
             &:after {
               content: '';
@@ -161,6 +230,12 @@
       }
 
       .inbox-footer {
+        &.half {
+          @media screen and (min-width: 1199px) {
+            max-width: 80%;
+          }
+        }
+
         .form-group {
           .form-control {
             padding-left: 60px;
@@ -182,7 +257,7 @@
             content: '';
             position: absolute;
             width: 2px;
-            top: 10px;
+            top: 18px;
             border-radius: 5px;
             height: 20px;
             right: -10px;
@@ -199,6 +274,72 @@
               color: var(--theme-color);
             }
           }
+        }
+      }
+
+    }
+  }
+}
+
+
+.inbox-details {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+
+  .user-img {
+    width: 200px;
+    height: 200px;
+
+    @media screen and (max-width: 1399px) {
+      width: 120px;
+      height: 120px;
+
+    }
+  }
+
+  .each-file-wrapper {
+    padding: 10px;
+    transition: .3s all ease-in-out;
+
+    .icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--theme-fade);
+      color: var(--theme-color);
+
+      &.image {
+        background-color: var(--orange-fade);
+        color: var(--orange);
+      }
+
+      &.video {
+        background-color: var(--light-green-fade);
+        color: var(--light-green);
+      }
+    }
+
+    .right-arrow {
+      transform: translateX(-10px);
+      transition: .3s all ease-in-out;
+
+      @media screen and (max-width: 1399px) {
+        transform: translateY(8px);
+      }
+    }
+
+    &:hover {
+      transition: .3s all ease-in-out;
+      background-color: var(--bs-gray-200);
+
+      .right-arrow {
+        transform: translateX(0);
+        transition: .3s all ease-in-out;
+        @media screen and (max-width: 1399px) {
+          transform: translateY(8px);
         }
       }
     }

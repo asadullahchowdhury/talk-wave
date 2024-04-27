@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <router-view class="chat-layout bg-white p-3"/>
+    <router-view class="chat-layout bg-white py-3 px-xxl-3"/>
   </div>
 </template>
 
@@ -11,7 +11,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

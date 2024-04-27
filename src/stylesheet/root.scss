@@ -22,6 +22,10 @@
   --f-lato: "Lato", sans-serif;
 }
 
+.text-theme{
+  color: var(--theme-color)!important;
+}
+
 /*Components*/
 @import "components/header";
 @import "components/iterations";

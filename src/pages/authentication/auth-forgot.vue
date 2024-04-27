@@ -3,10 +3,10 @@
 
     <!--Form Header start-->
     <div class="logo fw-bold fs-2 mb-3 ">
-      <img src="https://themes.pixelstrap.com/chitchat/assets/images/logo/landing-logo.png" alt="">
+      <b>Chat</b><span class="text-theme">Echo</span>
     </div>
     <h3 class="fw-semibold">Forgot Password? </h3>
-    <p class="text-muted mb-4">Welcome to Chatecho please login to your account.</p>
+    <p class="text-muted mb-4">Welcome to ChatEcho please login to your account.</p>
     <!--Form Header end  -->
 
     <!--Email input-->

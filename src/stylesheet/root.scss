@@ -23,6 +23,7 @@
 }
 
 /*Components*/
+@import "components/header";
 @import "components/iterations";
 @import "components/switch";
 @import "components/animation";
@@ -30,4 +31,5 @@
 
 /*Pages*/
 @import "pages/authentication";
+@import "pages/homepage";
 @import "pages/inbox";
